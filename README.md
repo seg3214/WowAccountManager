@@ -10,6 +10,7 @@ This is **C\# Windows Forms** application designed to manage multiple [World of 
 * **Advanced Anti-AFK System**: Keeps multiple characters online by simulating randomized movement and jumping patterns, preventing inactivity-based disconnections.  
 ![App Demo](./assets/Animation5.gif)
 * **Multi-Threaded Key Spammer**: Enables users to send custom key combinations to specific game windows at user-defined intervals. 
+![App Demo](./assets/anim6.gif)
 
 Technical Implementation
 
