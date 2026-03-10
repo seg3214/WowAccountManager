@@ -1,6 +1,6 @@
 ### Wow Account Manager
 This is **C\# Windows Forms** application designed to manage multiple [World of Warcraft (WoW)](https://www.google.com/search?q=World+of+Warcraft) accounts simultaneously. It automates the login process, maintains active sessions via anti-AFK mechanics, and provides a multi-threaded key-spamming utility.  
-
+![App Demo](./assets/img1.gif)
 * **Automated Account Management**: Allows users to select an account from a stored list for instant login or seamless switching between active game windows.  
 ![App Demo](./assets/Animation4.gif)
 * **Dynamic Realm Handling**: Automatically detects if the current game client matches the required realm; if not, it updates the realm file and launches a fresh client instance.  
