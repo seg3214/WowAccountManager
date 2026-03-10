@@ -6,6 +6,7 @@ This is **C\# Windows Forms** application designed to manage multiple [World of 
 * **Dynamic Realm Handling**: Automatically detects if the current game client matches the required realm; if not, it updates the realm file and launches a fresh client instance.  
 * **Intelligent Login & Character Selection**: Reads game states (login screen, character selection) to automatically input credentials and enter the game world with a pre-selected character.  
 * **Advanced Anti-AFK System**: Keeps multiple characters online by simulating randomized movement and jumping patterns, preventing inactivity-based disconnections.  
+![App Demo](./assets/Animation5.gif)
 * **Multi-Threaded Key Spammer**: Enables users to send custom key combinations to specific game windows at user-defined intervals. 
 
 Technical Implementation
