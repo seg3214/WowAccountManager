@@ -856,10 +856,13 @@ namespace WowAccountManager
         }
         private void SendSpamKeys(WowWindow w)
         {
+            /*
             if (sendingIt == 1)
             {
+
                 return;
-            }
+            }*/
+            Debug.WriteLine($" 22 {w.accountName} , {w.count} ");
             char[] allChars = textBox1.Text.ToCharArray();
             List<short> keys = new List<short>();
             foreach (char c in allChars)
@@ -871,7 +874,7 @@ namespace WowAccountManager
                 }
             }
 
-            Interlocked.Exchange(ref sendingIt, 1);
+            // Interlocked.Exchange(ref sendingIt, 1);
             ThreadPool.QueueUserWorkItem(delegate
         {
             Interlocked.Increment(ref threadCount);
@@ -884,7 +887,7 @@ namespace WowAccountManager
             }
 
             Interlocked.Decrement(ref threadCount);
-            Interlocked.Exchange(ref sendingIt, 0);
+            // Interlocked.Exchange(ref sendingIt, 0);
         });
         }
         private void AntiAFK_tick(WowWindow w)

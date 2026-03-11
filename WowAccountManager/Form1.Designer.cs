@@ -185,7 +185,7 @@
             // antiafktimer
             // 
             this.antiafktimer.Enabled = true;
-            this.antiafktimer.Interval = 60000;
+            this.antiafktimer.Interval = 4000;
             this.antiafktimer.Tick += new System.EventHandler(this.AntiAFKTimer_Tick);
             // 
             // textBox3
