@@ -34,7 +34,6 @@ namespace WowAccountManager
         private bool switchPending = false;
         private int lastSelectedLine = -1;
         private bool busyLaunching = false;
-        private int sendingIt = 0;
         private int threadCount = 0;
 
         private struct WowWindow
@@ -54,7 +53,7 @@ namespace WowAccountManager
             public string realmListPath;
             public BlackMagic wow;
         }
-        private List<WowWindow> WowWindows = new List<WowWindow>();
+        private readonly List<WowWindow> WowWindows = new List<WowWindow>();
 
         private struct PointData
         {
@@ -732,8 +731,8 @@ namespace WowAccountManager
         }
         private void WOW_WriteRealmList(string server)
         {
-            string wowpath = textBox2.Text;
-            string locale = textBox3.Text;
+            string wowpath = WowFolderBox.Text;
+            string locale = LocaleBox.Text;
             if (!IsPathExists(wowpath))
             {
                 Log($"Cant find {wowpath}");
@@ -1000,7 +999,7 @@ namespace WowAccountManager
         {
             if (busyLaunching)
                 return;
-            string wowpath = textBox2.Text;
+            string wowpath = WowFolderBox.Text;
             if (!IsPathExists(wowpath))
             {
                 Log($"Cant find {wowpath}");
@@ -1047,7 +1046,7 @@ namespace WowAccountManager
             listBox1.SelectedIndex = listBox1.Items.Count - 1;
             listBox1.SelectedIndex = -1;
         }
-        private void Test_button2_Click(object sender, EventArgs e)
+        private void DebugButton2_Click(object sender, EventArgs e)
         {
 #if DEBUG
             SaveControlStates();
@@ -1076,7 +1075,7 @@ namespace WowAccountManager
             return;
 #endif
         }
-        private void Button3_Click(object sender, EventArgs e)
+        private void Debug_button1_Click(object sender, EventArgs e)
         {
 #if DEBUG
             DEBUGColorTimer.Enabled = true;
@@ -1205,11 +1204,11 @@ namespace WowAccountManager
         private void Form1_Load(object sender, EventArgs e)
         {
 #if !DEBUG
-            this.Controls.Remove(button2);
-            this.Controls.Remove(button3);
+            this.Controls.Remove(DebugButton1);
+            this.Controls.Remove(DebugButton2);
 
-            button2.Dispose();
-            button3.Dispose();
+            DebugButton1.Dispose();
+            DebugButton2.Dispose();
 #endif
             rootDir = GetRootDir();
             settingsPath = Path.Combine(rootDir, @"settings.xml");
@@ -1295,6 +1294,16 @@ namespace WowAccountManager
                 dataSet1.ReadXml(grid1Path);
                 dataGridView1.DataSource = dataSet1.Tables["Table1"];
             }
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LocaleBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void SaveControlStates()
