@@ -17,7 +17,7 @@ This is **C\# Windows Forms** application designed to manage multiple [World of 
 * **Multi-Threaded Key Spammer**: Enables users to send custom key combinations to specific game windows at user-defined intervals.  
 ![App Demo](./assets/anim6.gif)
 
-## 🛠️ How It Works
+## ⚙️ How It Works
 * **P/Invoke & Win32 API**: Leverages `user32.dll` and `kernel32.dll` to perform low-level window management and simulate keyboard input directly to game clients.  
 * **High-Concurrency Architecture**: Spawns independent threads for each spam task to ensure non-blocking performance across multiple game instances.  
 * **Thread Safety & Synchronization**: Employs **atomic read-modify-write** operations on shared variables to maintain state integrity and prevent race conditions in a multi-threaded environment.  
