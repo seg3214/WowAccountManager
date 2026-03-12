@@ -3,7 +3,7 @@
 
 This is **C\# Windows Forms** application designed to manage multiple [World of Warcraft (WoW)](https://www.google.com/search?q=World+of+Warcraft) accounts simultaneously. It automates the login process, maintains active sessions via anti-AFK mechanics, and provides a multi-threaded key-spamming utility.  
 
-![App Demo](./assets/img1.gif)
+![App Demo](./assets/img2.gif)
 
 ## 🚀 Key Features
 * **Automated Account Management**: Allows users to select an account from a stored list for instant login or seamless switching between active game windows.  
